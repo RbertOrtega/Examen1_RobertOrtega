@@ -14,9 +14,9 @@ class _CurrencyConverterScreenState extends State<CurrencyConverterScreen> {
   void convertCurrency() {
     setState(() {
       if (selectedCurrency == 'USD') {
-        convertedAmount = inputAmount * 24.68; // Ejemplo de tasa de conversión
+        convertedAmount = inputAmount * 24.68;
       } else {
-        convertedAmount = inputAmount * 26.78; // Ejemplo de tasa de conversión
+        convertedAmount = inputAmount * 26.78;
       }
     });
   }
