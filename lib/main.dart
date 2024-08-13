@@ -1,20 +1,29 @@
 import 'package:flutter/material.dart';
+import 'screens/home_screen.dart';
+import 'screens/news_screen.dart';
+import 'screens/task_list_screen.dart';
+import 'screens/currency_converter_screen.dart';
+import 'screens/podcast_screen.dart';
 
 void main() {
-  runApp(const MainApp());
+  runApp(MyApp());
 }
 
-class MainApp extends StatelessWidget {
-  const MainApp({super.key});
-
+class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
-        ),
+    return MaterialApp(
+      title: 'App CEUTEC',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
       ),
+      home: HomeScreen(),
+      routes: {
+        '/news': (context) => NewsScreen(),
+        '/tasks': (context) => TaskListScreen(),
+        '/converter': (context) => CurrencyConverterScreen(),
+        '/podcast': (context) => PodcastScreen(),
+      },
     );
   }
 }
